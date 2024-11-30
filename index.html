@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habitantes de Zepthalia</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video {
+      width: 100%;     /* Ancho 100% de la pantalla */
+      height: auto;    /* Ajusta el alto automáticamente manteniendo la relación de aspecto */
+      display: block;  /* Asegura que cada vídeo sea un bloque independiente */
+      margin-bottom: 0; /* Sin espacio entre los vídeos */
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <!-- Vídeos -->
+    <video class="video" muted>
+      <source src="/uno.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+    <video class="video" muted>
+      <source src="/dos.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+    <video class="video" muted>
+      <source src="/tres.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+    <video class="video" muted>
+      <source src="/cuatro.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+    <video class="video" muted>
+      <source src="/cinco.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+    <video class="video" muted>
+      <source src="/seis.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+    <video class="video" muted>
+      <source src="/siete.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+    <video class="video" muted>
+      <source src="video8.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+    <video class="video" muted>
+      <source src="/nueve.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+    <video class="video" muted>
+      <source src="video10.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+    <video class="video" muted>
+      <source src="video11.mp4" type="video/mp4">
+      Tu navegador no soporta reproducción de vídeo.
+    </video>
+  </div>
+
+  <script>
+    // Seleccionar todos los vídeos
+    const videos = document.querySelectorAll('.video');
+
+    // Agregar eventos de mouseover y mouseout a cada vídeo
+    videos.forEach(video => {
+      video.addEventListener('mouseover', () => {
+        video.play(); // Reproducir el vídeo al pasar el mouse
+      });
+
+      video.addEventListener('mouseout', () => {
+        video.pause(); // Pausar el vídeo al quitar el mouse
+        video.currentTime = 0; // Reiniciar el vídeo para que empiece desde el principio
+      });
+    });
+  </script>
+</body>
+</html>
+
